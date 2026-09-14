@@ -1,127 +1,168 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Knowledge Base AHRW</title>
-
-  <meta name="robots" content="noindex, nofollow, noarchive">
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Knowledge base pubblica e anonimizzata per AHRW, Site Painter e DMS Zucchetti. Contiene solo informazioni tecniche osservate o verificate.">
+  <meta name="robots" content="index,follow">
+  <title>AHRW Knowledge Base</title>
   <style>
-    body {
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 0 24px;
-      background: #f5f7fa;
-      color: #222;
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-    }
-
-    header {
-      padding: 28px;
-      background: #1f4e78;
-      color: white;
-      border-radius: 10px;
-    }
-
-    main {
-      margin-top: 24px;
-      padding: 28px;
-      background: white;
-      border-radius: 10px;
-    }
-
-    h1 {
-      margin: 0;
-    }
-
-    h2 {
-      color: #1f4e78;
-      border-bottom: 1px solid #d8e2ec;
-      padding-bottom: 8px;
-    }
-
-    .avviso {
-      padding: 14px;
-      background: #fff3cd;
-      border-left: 5px solid #d39e00;
-    }
-
-    code {
-      padding: 2px 5px;
-      background: #eef1f4;
-      border-radius: 3px;
-    }
-
-    footer {
-      margin-top: 24px;
-      color: #666;
-      text-align: center;
-      font-size: 12px;
-    }
+    :root{--navy:#17365d;--blue:#1f4e78;--light:#eaf2f8;--green:#e2f0d9;--yellow:#fff2cc;--red:#fce4d6;--gray:#f5f7fa;--line:#d7dee8;--text:#1f2937}
+    *{box-sizing:border-box} body{margin:0;font-family:Segoe UI,Arial,sans-serif;color:var(--text);background:#f4f7fb;line-height:1.58}
+    header{background:linear-gradient(135deg,var(--navy),#2f75b5);color:#fff;padding:44px 22px}
+    header .wrap,main,footer .wrap{max-width:1120px;margin:auto} h1{margin:0 0 8px;font-size:2.25rem} header p{margin:0;max-width:850px;font-size:1.05rem}
+    nav{position:sticky;top:0;z-index:5;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 2px 8px #0000000d}
+    nav .wrap{max-width:1120px;margin:auto;display:flex;gap:16px;flex-wrap:wrap;padding:10px 22px} nav a{color:var(--blue);font-weight:600;text-decoration:none}
+    main{padding:28px 22px 48px} section{background:#fff;border:1px solid var(--line);border-radius:12px;padding:24px;margin:0 0 22px;box-shadow:0 3px 14px #12263a0d}
+    h2{color:var(--navy);margin:0 0 16px;border-bottom:2px solid #dce6f1;padding-bottom:8px} h3{color:var(--blue);margin:24px 0 9px} h4{margin:18px 0 7px}
+    code,pre{font-family:Consolas,monospace} code{background:#eef2f7;padding:2px 5px;border-radius:4px} pre{background:#101827;color:#f8fafc;padding:14px;border-radius:8px;overflow:auto;white-space:pre-wrap}
+    .callout{border-left:5px solid var(--blue);background:var(--light);padding:13px 15px;border-radius:6px;margin:14px 0}.ok{border-color:#548235;background:var(--green)}.warn{border-color:#bf9000;background:var(--yellow)}.no{border-color:#c00000;background:var(--red)}
+    .badge{display:inline-block;padding:3px 9px;border-radius:999px;font-size:.8rem;font-weight:700;margin-right:5px}.verified{background:#c6e0b4;color:#274e13}.observed{background:#ddebf7;color:#17365d}.testing{background:#ffe699;color:#7f6000}.failed{background:#f4cccc;color:#900}
+    table{width:100%;border-collapse:collapse;margin:12px 0 20px} th,td{border:1px solid var(--line);padding:9px 10px;vertical-align:top;text-align:left} th{background:#d9eaf7;color:#17365d} tr:nth-child(even) td{background:#fafbfd}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}.card{border:1px solid var(--line);background:#fbfcfe;border-radius:9px;padding:15px}.card h3{margin-top:0}
+    ul,ol{padding-left:22px}.small{font-size:.91rem;color:#4b5563} footer{background:#172033;color:#dbe5f2;padding:24px 22px}
+    @media(max-width:650px){h1{font-size:1.65rem}section{padding:17px}nav{position:static}}
   </style>
 </head>
-
 <body>
+<header><div class="wrap">
+  <h1>AHRW Knowledge Base</h1>
+  <p>Base di conoscenza pubblica e anonimizzata su Ad Hoc Revolution Web, Site Painter e DMS. Le informazioni sono classificate per stato e non contengono dati reali di clienti, matricole, prezzi, credenziali o infrastrutture.</p>
+</div></header>
+<nav><div class="wrap">
+  <a href="#governance">Governance</a><a href="#sitepainter">Site Painter</a><a href="#funzioni">Funzioni</a><a href="#query">Query e campi</a><a href="#soluzioni">Soluzioni verificate</a><a href="#dms">DMS</a><a href="#errori">Tentativi da evitare</a>
+</div></nav>
+<main>
+<section id="governance">
+<h2>1. Governance della conoscenza</h2>
+<div class="callout warn"><strong>Uso pubblico:</strong> pubblicare esclusivamente procedure tecniche anonimizzate. Non inserire clienti, matricole reali, prezzi, credenziali, URL interni, screenshot non anonimizzati o documenti commerciali.</div>
+<table><thead><tr><th>Stato</th><th>Significato</th></tr></thead><tbody>
+<tr><td><span class="badge verified">Verificata</span></td><td>Provata nella stampa o nell’operazione reale e dichiarata funzionante.</td></tr>
+<tr><td><span class="badge observed">Osservata</span></td><td>Funzione, campo o proprietà visibile, ma comportamento non completamente compreso.</td></tr>
+<tr><td><span class="badge testing">Da verificare</span></td><td>Soluzione plausibile che richiede una prova isolata.</td></tr>
+<tr><td><span class="badge failed">Non funzionante</span></td><td>Prova già eseguita con errore, risultato vuoto o comportamento diverso dall’atteso.</td></tr>
+</tbody></table>
+<h3>Metodo operativo</h3><ol><li>Provare un solo elemento per volta.</li><li>Mostrare prima il valore grezzo.</li><li>Verificare poi il calcolo senza Hide.</li><li>Applicare infine la condizione Hide.</li><li>Registrare contesto, query, sezione, espressione, dati di prova e risultato.</li><li>Promuovere una soluzione a “Verificata” solo dopo conferma esplicita.</li></ol>
+</section>
 
-  <header>
-    <h1>Knowledge Base AHRW</h1>
-    <p>
-      Manuale operativo per Ad Hoc Revolution Web,
-      Site Painter e DMS.
-    </p>
-  </header>
+<section id="sitepainter">
+<h2>2. Site Painter: regole generali</h2>
+<ul>
+<li>Le espressioni richiamano normalmente i campi con prefisso <code>c_</code>.</li>
+<li>La sintassi osservata per il filtro di riga è <code>campo&lt;condizione&gt;</code>.</li>
+<li>La proprietà di visibilità verificata è <code>Print Options &gt; Hide under condition</code>.</li>
+<li>Quando Hide restituisce vero, l’oggetto o la sezione viene nascosto.</li>
+<li>Una sezione delimitata dalle righe rosse può nascondere insieme etichetta, valore e spazio verticale.</li>
+<li>Due oggetti sovrapposti con condizioni opposte sono una tecnica verificata per risultati alternativi.</li>
+</ul>
+<div class="callout ok"><strong>Regola verificata per RIF.ORD.PR:</strong> scrivere il codice senza apici nei filtri.</div>
+<pre>c_MVPREZZO&lt;c_MVCODART=RIF.ORD.PR&gt;</pre>
+<div class="callout no"><strong>Da non usare:</strong> gli apici intorno al codice hanno prodotto errore nella stampa.</div>
+<pre>c_MVCODART='RIF.ORD.PR'</pre>
+<h3>Comportamento particolare dei filtri</h3>
+<p>Non assumere che un filtro senza corrispondenze restituisca sempre zero, vuoto, Null o False. In contesti diversi sono stati osservati valori della riga corrente, valori numerici non distintivi oppure risultati vuoti. Ogni filtro deve essere testato nella query e nella sezione effettive.</p>
+</section>
 
-  <main>
+<section id="funzioni">
+<h2>3. Funzioni osservate nell’Expression Builder</h2>
+<div class="grid">
+<div class="card"><h3>Condizioni</h3><code>iif(expr,truepart,falsepart)</code><br><code>Empty(expr)</code><br><code>IsNull(expr)</code></div>
+<div class="card"><h3>Testo</h3><code>Left</code>, <code>Right</code>, <code>Len</code>, <code>Lower</code>, <code>Upper</code>, <code>LTrim</code>, <code>RTrim</code>, <code>Trim</code>, <code>Substr</code>, <code>Strtran</code>, <code>Replicate</code>, <code>Space</code>, <code>RAt</code></div>
+<div class="card"><h3>Numeri</h3><code>Int</code>, <code>IntL</code>, <code>Max</code>, <code>Min</code>, <code>Mod</code>, <code>Round</code>, <code>Trunc</code>, <code>Val</code>, <code>Str</code>, <code>WRFormatNumber</code></div>
+<div class="card"><h3>Date e formato</h3><code>DateDiff</code>, <code>Month</code>, <code>Week</code>, <code>Year</code>, <code>Sec</code>, <code>Format</code>, <code>FormatMsg</code></div>
+</div>
+<h3>iif</h3><pre>iif(condizione,valore_se_vero,valore_se_falso)</pre>
+<h3>FormatMsg</h3><p>È stato osservato l’uso di testi costanti e segnaposto come <code>%1</code>.</p>
+<pre>iif(c_MVTIPCON='C', FormatMsg('Vs. Rif.'), iif(c_MVTIPCON='F', FormatMsg('Rif.N.Fornitore'), FormatMsg('Vs. Rif.')))</pre>
+<div class="callout warn">La presenza di una funzione nell’elenco non garantisce che ogni annidamento venga accettato dal parser. Le combinazioni con i filtri di riga devono essere provate separatamente.</div>
+</section>
 
-    <div class="avviso">
-      Questa knowledge base contiene esclusivamente informazioni
-      tecniche anonimizzate. Non inserire clienti, matricole reali,
-      prezzi, credenziali, indirizzi IP o dati aziendali riservati.
-    </div>
+<section id="query">
+<h2>4. Query, campi e variabili osservati</h2>
+<h3>Query principale delle offerte</h3><p><code>gsve_qrep_doc_offerte</code></p>
+<table><thead><tr><th>Campo</th><th>Uso osservato</th></tr></thead><tbody>
+<tr><td><code>c_MVCODART</code></td><td>Codice articolo</td></tr><tr><td><code>c_MVPREZZO</code></td><td>Prezzo</td></tr><tr><td><code>c_MVQTAMOV</code></td><td>Quantità movimentata</td></tr><tr><td><code>c_MVDESART</code></td><td>Descrizione articolo</td></tr><tr><td><code>c_MVDESSUP</code></td><td>Descrizione supplementare della riga</td></tr><tr><td><code>c_MVDATREG</code></td><td>Data registrazione</td></tr><tr><td><code>c_MVDATEST</code></td><td>Data di riferimento esterno/consegna nel report</td></tr><tr><td><code>c_MVNOTAGG</code></td><td>Nota aggiuntiva</td></tr><tr><td><code>c_MVSERIAL</code></td><td>Identificativo/chiave osservata</td></tr><tr><td><code>c_TOTIMP</code></td><td>Totale/importo disponibile nel riepilogo</td></tr>
+</tbody></table>
+<h3>Query secondaria</h3><p><code>ambdoc_q</code> espone almeno <code>MVSERIAL</code> e <code>NOTE</code> e utilizza il parametro <code>w_MVSERIAL</code>.</p>
+<h3>User Variables</h3><p><code>w_totale</code>, <code>imposta</code>, <code>impiva</code>, <code>logo</code>, <code>conai</code>, <code>PageNo</code>, <code>MaxRowOrd</code>. <code>w_totale</code> è stata osservata come numerica <code>N(20,5)</code>.</p>
+<h3>Report Variables</h3><p><code>nNumPage</code>, <code>nNumPageStr</code>, <code>nTotalPages</code>, <code>nTotalPagesStr</code>. Nell’ambiente osservato non si possono creare liberamente nuove Report Variables.</p>
+</section>
 
-    <h2>Scopo</h2>
+<section id="soluzioni">
+<h2>5. Soluzioni verificate</h2>
+<h3>5.1 X superiore e inferiore in base alla differenza tra date</h3>
+<p><span class="badge verified">Verificata</span> Due oggetti “X” sovrapposti ai quadratini, controllati tramite Hide.</p>
+<h4>Hide della X superiore</h4><pre>DateDiff(c_MVDATREG,c_MVDATEST)&gt;2</pre>
+<h4>Hide della X inferiore</h4><pre>DateDiff(c_MVDATREG,c_MVDATEST)&lt;=2</pre>
+<p>Entro due giorni resta visibile la X superiore; oltre due giorni resta visibile la X inferiore.</p>
 
-    <p>
-      Questa pagina raccoglie procedure, sintassi, soluzioni verificate
-      e tentativi non funzionanti relativi all'ambiente AHRW.
-    </p>
+<h3>5.2 Prezzo totale netto con due oggetti sovrapposti</h3>
+<p><span class="badge verified">Verificata nel report specifico</span></p>
+<table><thead><tr><th>Caso</th><th>Espressione primaria</th><th>Hide under condition</th></tr></thead><tbody>
+<tr><td>Con RIF.ORD.PR</td><td><code>w_totale-c_MVPREZZO&lt;c_MVCODART=RIF.ORD.PR&gt;</code></td><td><code>0&lt;=c_MVPREZZO&lt;c_MVCODART=RIF.ORD.PR&gt;</code></td></tr>
+<tr><td>Senza RIF.ORD.PR</td><td><code>w_totale</code></td><td><code>0&gt;c_MVPREZZO&lt;c_MVCODART=RIF.ORD.PR&gt;</code></td></tr>
+</tbody></table>
 
-    <h2>Stati della conoscenza</h2>
+<h3>5.3 Prezzo totale netto a voi riservato</h3>
+<p><span class="badge verified">Verificata nel report specifico</span></p>
+<table><thead><tr><th>Caso</th><th>Espressione primaria</th><th>Hide under condition</th></tr></thead><tbody>
+<tr><td>Con RIF.ORD.PR</td><td><code>c_TOTIMP-c_MVPREZZO&lt;c_MVCODART=RIF.ORD.PR&gt;</code></td><td><code>0&lt;=c_MVPREZZO&lt;c_MVCODART=RIF.ORD.PR&gt;</code></td></tr>
+<tr><td>Senza RIF.ORD.PR</td><td><code>c_TOTIMP</code></td><td><code>0&gt;c_MVPREZZO&lt;c_MVCODART=RIF.ORD.PR&gt;</code></td></tr>
+</tbody></table>
+<p>L’intera riga è contenuta in una sezione con:</p><pre>c_TOTIMP=w_totale</pre>
+<p>Quando i due totali coincidono, la sezione non viene stampata.</p>
 
-    <ul>
-      <li><strong>VERIFICATO:</strong> provato nel sistema reale.</li>
-      <li><strong>DOCUMENTATO:</strong> presente in una fonte tecnica.</li>
-      <li><strong>DA VERIFICARE:</strong> ipotesi non ancora provata.</li>
-      <li><strong>NON FUNZIONANTE:</strong> prova eseguita senza successo.</li>
-      <li><strong>IN CONFLITTO:</strong> richiede una nuova verifica.</li>
-    </ul>
+<h3>5.4 Ultime due righe del riepilogo</h3>
+<p><span class="badge verified">Verificata</span> “Importo originario Vs. Ordine” e “Importo ad integrazione” vengono nascoste quando RIF.ORD.PR non è presente, mediante Hide applicato alle righe o alla sezione che le contiene.</p>
 
-    <h2>Regola operativa</h2>
+<h3>5.5 Descrizione supplementare di riga</h3>
+<p><span class="badge verified">Verificata nell’uso descritto</span> La descrizione supplementare viene mostrata soltanto quando è stata modificata rispetto alla descrizione originale dell’articolo. I nomi dei campi effettivi devono essere quelli presenti nella query del report.</p>
+</section>
 
-    <p>
-      Le soluzioni devono essere applicate soltanto quando risultano
-      classificate come <strong>VERIFICATE</strong> nel contesto indicato.
-    </p>
+<section id="special">
+<h2>6. Special Definitions</h2>
+<p><span class="badge observed">Osservata, non compresa</span></p>
+<p>Sugli oggetti Expression è presente <strong>Special Definitions</strong> con <strong>Calculations</strong>. Sono state osservate:</p>
+<ul><li><code>Nothing</code></li><li><code>Count</code></li><li><strong>Reset on:</strong> end of report, end of page, MVSERIAL</li><li><strong>Into variable:</strong> selezione di oggetti disponibili, non testo libero</li><li><strong>Calculate on:</strong> osservato end of report</li><li><strong>Calculate when:</strong> campo per una condizione</li></ul>
+<div class="callout warn">Il funzionamento pratico di Count, Reset on, Into variable, Calculate on e Calculate when non è stato verificato. Non usarlo come soluzione certa.</div>
+</section>
 
-    <h2>Aree della knowledge base</h2>
+<section id="dms">
+<h2>7. DMS e Scheda Prodotto matricola</h2>
+<h3>Struttura osservata</h3>
+<ul><li>Classe documentale: <code>Scheda prodotto matricola</code>.</li><li>Relazioni osservate: <code>RelMatricola</code>, <code>RelArt</code>, <code>RelCli</code>.</li><li>La scheda della matricola dispone di un’area Allegati.</li><li>È possibile creare o importare documenti collegati alla matricola.</li></ul>
+<h3>Attributi DMS</h3><p>Nella maschera Nuovo Attributo sono stati osservati: Codice, Personalizzato, Descrizione, Alias, Tipo attributo, Valore attributo, Usato per relazioni, Lunghezza e Decimali. Dalla schermata non emerge un recupero automatico di valori dalla matricola.</p>
+<h3>Editor HTML DMS</h3>
+<ul><li>Visualizza tabelle, input, textarea, radio button e contenuti formattati.</li><li>Gli stili inline risultano più compatibili del blocco <code>&lt;style&gt;</code>.</li><li>I campi HTML sono compilabili durante la sessione.</li><li>La persistenza dei valori inseriti negli input non è stata dimostrata.</li></ul>
+<h3>Limiti verificati</h3>
+<div class="callout no"><ul>
+<li><code>onclick="window.print()"</code> non viene eseguito.</li><li><code>href="javascript:window.print()"</code> non viene eseguito.</li><li><code>Ctrl+P</code> stampa l’intera pagina AHRW e la finestra modale.</li><li>L’apertura autonoma ha prodotto <code>about:blank#blocked</code>.</li><li>Non è stata individuata una conversione HTML-PDF ufficiale o un’allegazione automatica verificata.</li></ul></div>
+<h3>Esigenza della Scheda Prodotto</h3>
+<p>Dati da recuperare automaticamente, se disponibili: cliente, matricola, codice e descrizione articolo, tipo strumento, numero e data bolla. Dati da compilare dal tecnico: date di riparazione, versione software, fondo scala, pressione, regolatori, guasti, intervento, note, tecnico, costo, certificati, rapporti e opzioni Sì/No.</p>
+<h3>Architetture da valutare</h3><ol><li>Attributi DMS persistenti con report di stampa.</li><li>PDF compilabile collegato alla matricola.</li><li>Modello documentale ufficiale del DMS.</li><li>Maschera AHRW o portlet dedicata.</li></ol>
+</section>
 
-    <ul>
-      <li>Report e Site Painter</li>
-      <li>DMS e classi documentali</li>
-      <li>Matricole</li>
-      <li>Offerte e ordini</li>
-      <li>Campi, variabili e query</li>
-      <li>Errori e tentativi non funzionanti</li>
-    </ul>
+<section id="errori">
+<h2>8. Tentativi da non riproporre come soluzioni certe</h2>
+<ul>
+<li>Apici intorno a <code>RIF.ORD.PR</code> nei filtri.</li>
+<li>Assumere che l’assenza della riga filtrata produca sempre zero o vuoto.</li>
+<li>Usare <code>or</code> dentro Hide senza verifica.</li>
+<li>Usare <code>iif</code> complessi con campi filtrati senza test isolato.</li>
+<li>Usare <code>Max()</code> per recuperare automaticamente il valore normale quando il filtro azzera l’intera espressione.</li>
+<li>Usare <code>c_MVCODART&lt;c_MVCODART=RIF.ORD.PR&gt;</code> per recuperare il codice: in una prova ha restituito False.</li>
+<li>Usare quantità o prezzo come indicatore universale di presenza dell’articolo senza verificare il valore nel report specifico.</li>
+<li>Usare JavaScript dentro il documento HTML DMS per salvataggio o stampa.</li>
+<li>Inventare nuove Report Variables non disponibili nell’editor.</li>
+</ul>
+</section>
 
-  </main>
-
-  <footer>
-    Knowledge Base AHRW
-  </footer>
-
+<section id="aggiornamenti">
+<h2>9. Regola per gli aggiornamenti</h2>
+<p>Ogni aggiornamento deve riportare: titolo, area, report o pagina, query, sezione, problema, formula o configurazione, dati di prova, risultato, stato, data e note. Prima della pubblicazione è necessaria un’approvazione umana esplicita.</p>
+<div class="callout ok"><strong>Comando di approvazione consigliato:</strong> <code>APPROVATO</code>. L’approvazione autorizza la preparazione dell’aggiornamento, non l’inserimento di dati sensibili nella knowledge base pubblica.</div>
+</section>
+</main>
+<footer><div class="wrap"><strong>AHRW Knowledge Base</strong><br><span class="small">Contenuto tecnico pubblico, anonimizzato e soggetto a verifica nel singolo ambiente AHRW. Ultimo consolidamento: 14 settembre 2026.</span></div></footer>
 </body>
 </html>
