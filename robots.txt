@@ -1,0 +1,47 @@
+User-agent: *
+Allow: /
+Allow: /ahrw-knowledge/
+Allow: /ahrw-knowledge/sitemap.xml
+Disallow: /private/
+Disallow: /*.json$
+Disallow: /*?*sort=
+
+Sitemap: https://brioschiateq-oss.github.io/ahrw-knowledge/sitemap.xml
+
+# Google Bot
+User-agent: Googlebot
+Allow: /
+Allow: /ahrw-knowledge/
+Crawl-delay: 0
+
+# Bing Bot
+User-agent: Bingbot
+Allow: /
+Allow: /ahrw-knowledge/
+Crawl-delay: 0
+
+# Baiduspider
+User-agent: Baiduspider
+Allow: /
+Allow: /ahrw-knowledge/
+
+# Yandex Bot
+User-agent: YandexBot
+Allow: /
+Allow: /ahrw-knowledge/
+
+# Respectful crawlers
+User-agent: MJ12bot
+Allow: /
+Crawl-delay: 1
+
+User-agent: AhrefsBot
+Allow: /
+Crawl-delay: 1
+
+# Bad actors
+User-agent: BadBot
+Disallow: /
+
+User-agent: *
+Crawl-delay: 5
